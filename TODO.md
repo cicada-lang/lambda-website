@@ -1,5 +1,3 @@
-- fix `cicada-lang/lambda` to use its output
-
 # readonlylink
 
 - docs on readonlylink

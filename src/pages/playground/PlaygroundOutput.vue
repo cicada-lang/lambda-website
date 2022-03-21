@@ -11,9 +11,10 @@
       v-else
       class="flex h-full w-full flex-col overflow-x-auto overflow-y-auto"
     >
-      <div class="px-2 py-2">
-        <div v-html="state.output"></div>
-      </div>
+      <pre
+        class="h-full w-full overflow-y-auto whitespace-pre p-3 font-mono text-sm md:text-base"
+        v-html="state.output"
+      ></pre>
     </div>
   </div>
 </template>

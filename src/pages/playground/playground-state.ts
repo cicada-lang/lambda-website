@@ -7,13 +7,16 @@ const loader = new ModLoader()
 export class PlaygroundState {
   mod = new Mod(new URL(window.location.href), { loader })
   text = ""
-  output = ""
   error?: {
     kind: string
     message: string
   }
 
   constructor() {}
+
+  get output(): string {
+    return this.mod.output
+  }
 
   async refresh(): Promise<void> {
     try {

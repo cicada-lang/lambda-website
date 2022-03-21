@@ -16,18 +16,15 @@ export class PlaygroundState {
             writable: true,
             value: ""
         });
-        Object.defineProperty(this, "output", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: ""
-        });
         Object.defineProperty(this, "error", {
             enumerable: true,
             configurable: true,
             writable: true,
             value: void 0
         });
+    }
+    get output() {
+        return this.mod.output;
     }
     refresh() {
         return __awaiter(this, void 0, void 0, function* () {
