@@ -45,6 +45,11 @@ watch(
   route,
   () => {
     state.text = Base64.decode(route.params.encoded)
+
+    console.log({
+      message: "route changed, update state.text",
+      text: state.text,
+    })
   },
   { immediate: true }
 )
@@ -55,6 +60,11 @@ watch(
     await state.refresh()
     router.replace({
       path: `/playground/${Base64.encodeURI(state.text)}`,
+    })
+
+    console.log({
+      message: "state.text changed, refresh state",
+      text: state.text,
     })
   }, 300),
   { immediate: true }
