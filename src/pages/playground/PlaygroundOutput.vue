@@ -50,13 +50,10 @@ import { ref, watch } from "vue"
 
 import { PlaygroundState as State } from "./playground-state"
 
-
 const props = defineProps({
   state: State,
 })
 
 const initial = ref()
 const finial = ref()
-
-
 </script>
