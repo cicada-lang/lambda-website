@@ -29,12 +29,10 @@ import PlaygroundHeader from "./PlaygroundHeader.vue"
 import PlaygroundOutput from "./PlaygroundOutput.vue"
 import PlaygroundEditor from "./PlaygroundEditor.vue"
 
+defineProps({ encoded: String })
+
 const router = useRouter()
 const route = useRoute()
-
-const props = defineProps({
-  encoded: String,
-})
 
 const state = reactive(new State())
 
