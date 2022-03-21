@@ -15,7 +15,7 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@cicada-lang/lambda": "^0.0.9",
+    "@cicada-lang/lambda": "^0.0.11",
     "@cicada-lang/sexp": "^0.0.19",
     "@xieyuheng/ty": "^0.1.12",
     "core-js": "^3.21.1",

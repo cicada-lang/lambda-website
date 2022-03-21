@@ -53,9 +53,8 @@ watch(
 
 watch(
   () => state.text,
-  debounce(() => {
-    console.log(state.text)
-    state.refresh()
+  debounce(async () => {
+    await state.refresh()
     router.replace({
       path: `/playground/${Base64.encodeURI(state.text)}`,
     })
