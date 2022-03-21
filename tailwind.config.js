@@ -22,7 +22,7 @@ module.exports = {
     extend: {
       colors: {
         gray: colors.stone,
-        theme: colors.rose,
+        theme: colors.amber,
       },
     },
   },
