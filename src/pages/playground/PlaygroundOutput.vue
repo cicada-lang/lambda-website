@@ -11,49 +11,15 @@
       v-else
       class="flex h-full w-full flex-col overflow-x-auto overflow-y-auto"
     >
-      <div class="flex">
-        <button
-          class="w-full p-1 font-logo text-base text-theme-900"
-          :class="name === state.name ? 'bg-theme-100' : 'bg-theme-200'"
-          v-for="name in state.names"
-          :key="name"
-          @click="state.name = name"
-        >
-          {{ name }}
-        </button>
-      </div>
-
-      <div class="flex h-full flex-wrap overflow-x-auto overflow-y-auto">
-        <div v-if="initial" class="px-2 py-2">
-          <div
-            class="max-w-max rounded bg-theme-100 px-2 py-1 font-logo text-base text-theme-900"
-          >
-            initial
-          </div>
-          <div v-html="initial"></div>
-        </div>
-        <div v-if="finial" class="px-2 py-2">
-          <div
-            class="max-w-max rounded bg-theme-100 px-2 py-1 font-logo text-base text-theme-900"
-          >
-            finial
-          </div>
-          <div v-html="finial"></div>
-        </div>
+      <div class="px-2 py-2">
+        <div v-html="state.output"></div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, watch } from "vue"
-
 import { PlaygroundState as State } from "./playground-state"
 
-const props = defineProps({
-  state: State,
-})
-
-const initial = ref()
-const finial = ref()
+defineProps({ state: State })
 </script>

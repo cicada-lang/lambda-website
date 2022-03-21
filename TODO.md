@@ -1,4 +1,4 @@
-- import `cicada-lang/lambda`
+- fix `cicada-lang/lambda` to use its output
 
 # readonlylink
 
