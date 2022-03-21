@@ -26,11 +26,11 @@ export class PlaygroundState {
     get output() {
         return this.mod.output;
     }
-    refresh() {
+    refresh(href) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 delete this.error;
-                this.mod = yield loader.load(new URL(window.location.href), {
+                this.mod = yield loader.load(new URL(href), {
                     text: this.text,
                 });
             }

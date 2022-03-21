@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { watch, reactive, onMounted, onErrorCaptured } from "vue"
+import { nextTick, watch, reactive, onMounted, onErrorCaptured } from "vue"
 import { useRouter, useRoute } from "vue-router"
 import { PlaygroundState as State } from "./playground-state"
 import debounce from "lodash/debounce"
@@ -45,27 +45,17 @@ watch(
   route,
   () => {
     state.text = Base64.decode(route.params.encoded)
-
-    console.log({
-      message: "route changed, update state.text",
-      text: state.text,
-    })
   },
   { immediate: true }
 )
 
 watch(
   () => state.text,
-  debounce(async () => {
-    await state.refresh()
-    router.replace({
-      path: `/playground/${Base64.encodeURI(state.text)}`,
-    })
-
-    console.log({
-      message: "state.text changed, refresh state",
-      text: state.text,
-    })
+  debounce(async (text) => {
+    const path = `/playground/${Base64.encodeURI(text)}`
+    router.replace({ path })
+    const href = window.location.origin + path
+    await state.refresh(href)
   }, 300),
   { immediate: true }
 )
