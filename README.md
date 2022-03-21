@@ -1,7 +1,7 @@
-# INet Website
+# Lambda Website
 
-[ [VISIT](https://inet.cicada-lang.org)
-| [REPO](https://github.com/cicada-lang/inet) ]
+[ [VISIT](https://lambda.cicada-lang.org)
+| [REPO](https://github.com/cicada-lang/lambda) ]
 
 ## Contributions
 

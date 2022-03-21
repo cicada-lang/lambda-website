@@ -47,11 +47,9 @@
 
 <script setup>
 import { ref, watch } from "vue"
-import { NetRenderer } from "@cicada-lang/inet/lib/renderers/net-renderer"
 
 import { PlaygroundState as State } from "./playground-state"
 
-const renderer = new NetRenderer()
 
 const props = defineProps({
   state: State,
@@ -60,27 +58,5 @@ const props = defineProps({
 const initial = ref()
 const finial = ref()
 
-watch(
-  () => props.state.mod,
-  () => render(),
-  { immediate: true }
-)
 
-watch(
-  () => props.state.name,
-  () => render(),
-  { immediate: true }
-)
-
-async function render() {
-  initial.value = ""
-  finial.value = ""
-
-  if (props.state.name) {
-    const net = props.state.mod.buildNet(props.state.name)
-    initial.value = await renderer.render(net)
-    net.run()
-    finial.value = await renderer.render(net)
-  }
-}
 </script>

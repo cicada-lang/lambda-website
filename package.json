@@ -1,5 +1,5 @@
 {
-  "name": "inet-website",
+  "name": "lambda-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@cicada-lang/inet": "^0.0.11",
+    "@cicada-lang/lambda": "^0.0.7",
     "@cicada-lang/sexp": "^0.0.18",
     "@xieyuheng/ty": "^0.1.12",
     "core-js": "^3.21.1",
