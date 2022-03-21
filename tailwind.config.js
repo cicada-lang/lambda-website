@@ -17,12 +17,12 @@ module.exports = {
         "LXGW WenKai Larger",
         "monospace",
       ],
-      logo: ["Bodoni Moda", "Source Han Serif SC", "serif"],
-      cute: ["Kodchasan", "LXGW WenKai", "serif"],
+      logo: ["Linux Biolinum O", "LXGW WenKai Larger", "sans-serif"],
     },
     extend: {
       colors: {
         gray: colors.stone,
+        theme: colors.rose,
       },
     },
   },

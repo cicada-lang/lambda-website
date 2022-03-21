@@ -1,3 +1,6 @@
+- change theme color
+- import `cicada-lang/lambda`
+
 # readonlylink
 
 - docs on readonlylink
