@@ -18,12 +18,10 @@ export class PlaygroundState {
     return this.mod.output
   }
 
-  async refresh(href: string): Promise<void> {
+  async refresh(url: URL): Promise<void> {
     try {
       delete this.error
-      this.mod = await loader.load(new URL(href), {
-        text: this.text,
-      })
+      this.mod = await loader.load(url, { text: this.text })
     } catch (error) {
       this.catchError(error)
     }

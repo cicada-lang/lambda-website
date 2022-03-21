@@ -53,9 +53,10 @@ watch(
   () => state.text,
   debounce(async (text) => {
     const path = `/playground/${Base64.encodeURI(text)}`
-    router.replace({ path })
     const href = window.location.origin + path
-    await state.refresh(href)
+    const url = new URL(href)
+    router.replace({ path })
+    await state.refresh(url)
   }, 300),
   { immediate: true }
 )
