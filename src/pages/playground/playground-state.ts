@@ -21,7 +21,7 @@ export class PlaygroundState {
   async refresh(url: URL): Promise<void> {
     try {
       delete this.error
-      this.mod = await loader.load(url, { text: this.text })
+      this.mod = await loader.load(url, { code: this.text })
     } catch (error) {
       this.catchError(error)
     }
