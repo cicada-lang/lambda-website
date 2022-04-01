@@ -12,7 +12,7 @@
       class="flex h-full w-full flex-col overflow-x-auto overflow-y-auto"
     >
       <div
-        class="h-full w-full overflow-x-auto overflow-y-auto p-3 font-mono text-sm md:text-base"
+        class="h-full w-full overflow-x-auto overflow-y-auto whitespace-pre-line p-3 font-mono text-sm md:text-base"
         v-html="state.output"
       ></div>
     </div>
