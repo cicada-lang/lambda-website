@@ -1,11 +1,16 @@
 import { Mod, ModLoader } from "@cicada-lang/lambda/lib/lang/mod"
+import { BlockResource } from "@cicada-lang/lambda/lib/lang/block"
 import { Parser } from "@cicada-lang/lambda/lib/lang/parser"
 import { ParsingError } from "@cicada-lang/sexp/lib/errors"
 
 const loader = new ModLoader()
 
 export class PlaygroundState {
-  mod = new Mod(new URL(window.location.href), { loader })
+  mod = new Mod(new URL(window.location.href), {
+    loader,
+    blocks: new BlockResource(),
+  })
+
   text = ""
   error?: {
     kind: string
@@ -14,14 +19,14 @@ export class PlaygroundState {
 
   constructor() {}
 
-  get output(): string {
-    return this.mod.output
+  get outputs(): Array<undefined | string> {
+    return this.mod.blocks.outputs
   }
 
   async refresh(url: URL): Promise<void> {
     try {
       delete this.error
-      this.mod = await loader.load(url, { code: this.text })
+      this.mod = await loader.loadAndExecute(url, { code: this.text })
     } catch (error) {
       this.catchError(error)
     }
