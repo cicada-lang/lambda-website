@@ -15,28 +15,28 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@cicada-lang/lambda": "^0.0.21",
-    "@cicada-lang/sexp": "^0.0.20",
+    "@cicada-lang/lambda": "^0.0.27",
+    "@cicada-lang/sexp": "^0.0.22",
     "@xieyuheng/ty": "^0.1.12",
-    "core-js": "^3.21.1",
+    "core-js": "^3.22.2",
     "js-base64": "^3.7.2",
     "lodash": "^4.17.21",
-    "vue": "^3.2.31",
+    "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.181",
+    "@types/lodash": "^4.14.182",
     "@vue/cli-plugin-babel": "~5.0.4",
     "@vue/cli-plugin-router": "~5.0.4",
     "@vue/cli-plugin-typescript": "~5.0.4",
     "@vue/cli-service": "~5.0.4",
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.5",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.12",
-    "prettier": "^2.6.1",
+    "prettier": "^2.6.2",
     "prettier-plugin-organize-imports": "^2.3.4",
-    "prettier-plugin-tailwindcss": "^0.1.8",
-    "tailwindcss": "^3.0.23",
+    "prettier-plugin-tailwindcss": "^0.1.10",
+    "tailwindcss": "^3.0.24",
     "typescript": "~4.6.3"
   }
 }
